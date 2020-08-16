@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 65px 80vh 10vh;
+    grid-template-areas: "header header" "nav main" "footer footer";
+} 
+
+.cabecalho {
+    grid-area: header;
+    background-color: rgba(68, 68, 68, 0.705);
+    position: relative;
+}
+.cabecalho img#logo {
+    display: block;
+    position: absolute;
+    height: 100%;
+    margin-left: 30px;
+}
+.navegacao {
+    grid-area: nav;
+    background-color: rgb(43, 153, 226);
+    padding: 20px;
+    width: 200px;
+}
+.navegacao ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navegacao ul li {
+    list-style: none;
+    margin: 20px 0px;
+    color: white;
+    font-size: 1.4em;
+}
+.conteudo {
+    grid-area: main;
+    background-color: white;
+}
+.rodape {
+    grid-area: footer ;
+    background-color: tomato;
+}
+
+div.menu {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 763px) {
+    div.menu {
+        display: block;
+    }
+    #main {
+        grid-template-areas: "header" "main" " footer";
+        grid-template-columns: 100vw;
+    }
+    .navegacao {
+        grid-area: main;
+    }
+    
+}
+
+.esconder {
+    z-index: 100;
+    width: 200px;
+}

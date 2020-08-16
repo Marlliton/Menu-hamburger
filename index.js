@@ -1,4 +1,5 @@
 
+
 document.querySelector('.menu').addEventListener('click', botao)
 
 function botao() {
@@ -12,6 +13,6 @@ function botao() {
 }
 
 function esconder() {
-    const nav = document.querySelector('#navegacao').classList
+    const nav = document.querySelector('.navegacao').classList
     nav.toggle('esconder')
 }
