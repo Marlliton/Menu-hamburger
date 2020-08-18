@@ -1,3 +1,4 @@
+/*========================= CONFIGURAÇÕES GERAIS =============================== */
 * {
     padding: 0;
     margin: 0;
@@ -6,9 +7,11 @@
 #main {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 65px 80vh 10vh;
-    grid-template-areas: "header header" "nav main" "footer footer";
-} 
+    grid-template-rows: 65px 83vh 8vh;
+    grid-template-areas: "header header" "nav main" "nav footer";
+}
+
+/*========================= CABEÇALHO =============================== */
 
 .cabecalho {
     grid-area: header;
@@ -21,6 +24,8 @@
     height: 100%;
     margin-left: 30px;
 }
+
+/*========================= MENU DE NAVEGAÇÃO =============================== */
 .navegacao {
     grid-area: nav;
     background-color: rgb(43, 153, 226);
@@ -31,20 +36,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 .navegacao ul li {
     list-style: none;
     margin: 20px 0px;
+    padding: 15px 8px;
     color: white;
     font-size: 1.4em;
+}
+.navegacao ul li a {
+    text-decoration: none;
+    color: white;
+}
+.navegacao ul li:hover {
+    background-color: #4444448f;
 }
 .conteudo {
     grid-area: main;
     background-color: white;
-}
-.rodape {
-    grid-area: footer ;
-    background-color: tomato;
+    padding: 3px 10px ;
 }
 
 div.menu {
@@ -76,4 +87,19 @@ div.menu {
 .esconder {
     z-index: 100;
     width: 200px;
+}
+
+/*========================= RODAPÉ =============================== */
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    grid-area: footer ;
+    /* background-color: blueviolet; */
+}
+
+
+.rodape img {
+    height: 50%;
+    margin-top: 15px;
 }

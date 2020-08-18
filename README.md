@@ -1,4 +1,5 @@
 # Menu-hamburger
+**Projeto em andamento**.
 Menu simples com algumas animações, utilizando somente **HTML5 CSS3** e **JavaScript**. 
 
 
